@@ -92,11 +92,12 @@ async function startPairing() {
                     await sock.sendMessage(sock.user.id, {  
                         text: `
 
-◈━━━━━━━━━━━◈
-│❒ Hello! 👋 You're now connected to Toxic-MD.
+╭━━━〔 🤖 LUCVOICE-XMD 〕━━━╮
+┃ 👋 Connected Successfully
+┃ 🔐 Generating Session ID...
+┃ 📩 Sending Soon 🙂
+╰━━━━━━━━━━━━━━━━━━━━━━╯
 
-│❒ Please wait a moment while we generate your session ID. It will be sent shortly... 🙂
-◈━━━━━━━━━━━◈
 `,
 });
 } catch (msgError) {
