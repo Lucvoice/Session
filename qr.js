@@ -125,10 +125,15 @@ const { makeid } = require('./id');
 
                           try {
                               await sock.sendMessage(sock.user.id, {
-                                  text: `◈━━━━━━━━━━━◈
-  │❒ Hello! 👋 You're now connected to Toxic-MD.
-  │❒ Please wait a moment while we generate your session ID. It will be sent shortly... 🙂
-  ◈━━━━━━━━━━━◈`
+                                  text: `
+
+╭━━━〔 💜 LUCVOICE-XMD 💚 〕━━━╮
+┃ 👋 Connected Successfully
+┃ 🔐 Generating Session ID...
+┃ 📩 Sending Soon 🙂
+╰━━━━━━━━━━━━━━━━━━━━╯
+
+`,
                               });
                           } catch {}
 
