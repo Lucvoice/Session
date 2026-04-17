@@ -92,12 +92,17 @@ async function startPairing() {
                     await sock.sendMessage(sock.user.id, {  
                         text: `
 
-◈━━━━━━━━━━━◈
-│❒ Hello! 👋 You're now connected to Toxic-MD.
+╭───────────────╮
+│ 🤖 LUCVOICE-XMD
+╰───────────────╯
 
-│❒ Please wait a moment while we generate your session ID. It will be sent shortly... 🙂
-◈━━━━━━━━━━━◈
-`,
+👋 Hello! You are now successfully connected.
+
+⏳ Please wait...
+We are generating your Session ID.
+It will be sent to you shortly 🙂
+
+`
 });
 } catch (msgError) {
 console.log("Welcome message skipped, continuing...");
