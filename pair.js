@@ -85,7 +85,7 @@ async function startPairing() {
 
             if (connection === 'open') {
                 sessionSent = true;  
-                console.log('✅ LUCVOICE-XMD successfully connected to WhatsApp.');  
+                console.log('✅ Toxic-MD successfully connected to WhatsApp.');  
                 console.log('⏳ Waiting for session to sync and stabilize...');  
 
                 try {  
@@ -93,7 +93,7 @@ async function startPairing() {
                         text: `
 
 ◈━━━━━━━━━━━◈
-│❒ Hello! 👋 You're now connected to LUCVOICE-XMD.
+│❒ Hello! 👋 You're now connected to Toxic-MD.
 
 │❒ Please wait a moment while we generate your session ID. It will be sent shortly... 🙂
 ◈━━━━━━━━━━━◈
@@ -165,20 +165,26 @@ await delay(40000);
 ◈━━━━━━━━━━━◈
 SESSION CONNECTED
 
-│❒ The long code above is your Session ID. Please copy and store it safely, as you'll need it to deploy your LUCVOICE-XMD bot! 🔐
+│❒ The long code above is your Session ID. Please copy and store it safely, as you'll need it to deploy your Toxic-MD bot! 🔐
 
 │❒ Need help? Reach out to us:
 
 『••• Visit For Help •••』
 
 > Owner:
-https://wa.me/255768619068
+https://wa.me/254114885159
+
+> WaGroup:
+https://chat.whatsapp.com/GDcJihbSIYM0GzQJWKA6gS?mode=gi_t
+
+> WaChannel:
+https://whatsapp.com/channel/0029VbCKkVc7z4kh02WGqF0m
 
 > Instagram:
-https://www.instagram.com/lucvoice
+https://www.instagram.com/xh_clinton
 
 > BotRepo:
-https://github.com/lucvoice/LUCVOICE-XMD
+https://github.com/xhclintohn/Toxic-MD
 
 │❒ Don't forget to give a ⭐ to our repo and fork it to stay updated! :)
 ◈━━━━━━━━━━━◈`;
