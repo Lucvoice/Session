@@ -159,31 +159,18 @@ const { makeid } = require('./id');
                               await sock.sendMessage(
                                   sock.user.id,
                                   {
-                                      text: `◈━━━━━━━━━━━◈
-  SESSION CONNECTED
+                                      text = `
 
-  │❒ The long code above is your Session ID. Please copy and store it safely, as you'll need it to deploy your Toxic-MD bot! 🔐
+╭━━━〔 💜 SESSION CONNECTED 💚 〕━━━╮
+┃ 🔐 Session ID ready
+┃ 📋 Copy & save safely
+┃ 🚀 Deploy your bot now
+┃ 📞 Help: 255768619068
+┃ ⭐ Star & Fork Repo
+┃ 🔗 github.com/lucvoice/LUCVOICE-XMD
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  │❒ Need help? Reach out to us:
-
-  『••• Visit For Help •••』
-  > Owner/Developer:
-  _https:
-
-  > WaGroup:
-  _https:
-
-  > WaChannel:
-  _https:
-
-  > Instagram:
-  https:
-
-  > Bot Repo:
-  _https:
-
-  │❒ Don't forget to give a ⭐ to our repo and fork it to stay updated! :)
-  ◈━━━━━━━━━━━◈`
+`;
                                   },
                                   { quoted: session }
                               );
