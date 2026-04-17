@@ -160,34 +160,22 @@ await delay(40000);
 
                     await delay(5000);  
 
-                    const infoMessage = `
+                   const infoMessage = `
 
-◈━━━━━━━━━━━◈
-SESSION CONNECTED
+╭───────────────╮
+│ 🔐 SESSION CONNECTED
+╰───────────────╯
 
-│❒ The long code above is your Session ID. Please copy and store it safely, as you'll need it to deploy your Toxic-MD bot! 🔐
+📌 The long code above is your Session ID.
 
-│❒ Need help? Reach out to us:
+⚠️ Copy and save it safely.
+You will need it to deploy your bot.
 
-『••• Visit For Help •••』
+⭐ Don't forget to Fork & Star LUCVOICE-XMD
 
-> Owner:
-https://wa.me/254114885159
-
-> WaGroup:
-https://chat.whatsapp.com/GDcJihbSIYM0GzQJWKA6gS?mode=gi_t
-
-> WaChannel:
-https://whatsapp.com/channel/0029VbCKkVc7z4kh02WGqF0m
-
-> Instagram:
-https://www.instagram.com/xh_clinton
-
-> BotRepo:
-https://github.com/xhclintohn/Toxic-MD
-
-│❒ Don't forget to give a ⭐ to our repo and fork it to stay updated! :)
-◈━━━━━━━━━━━◈`;
+🌐 GitHub:
+https://github.com/yourusername/LUCVOICE-XMD
+`;
 
 console.log('📤 Sending information message...');  
                     await sock.sendMessage(sock.user.id, { text: infoMessage }, { quoted: sentSession });  
