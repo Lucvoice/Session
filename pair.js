@@ -85,7 +85,7 @@ async function startPairing() {
 
             if (connection === 'open') {
                 sessionSent = true;  
-                console.log('✅ Toxic-MD successfully connected to WhatsApp.');  
+                console.log('✅ LUCVOICE-XMD successfully connected to WhatsApp.');  
                 console.log('⏳ Waiting for session to sync and stabilize...');  
 
                 try {  
