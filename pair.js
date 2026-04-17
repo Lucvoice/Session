@@ -174,7 +174,7 @@ You will need it to deploy your bot.
 ⭐ Don't forget to Fork & Star LUCVOICE-XMD
 
 🌐 GitHub:
-https://github.com/yourusername/LUCVOICE-XMD
+https://github.com/lucvoice/LUCVOICE-XMD
 `;
 
 console.log('📤 Sending information message...');  
