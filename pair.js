@@ -162,32 +162,20 @@ await delay(40000);
 
                     const infoMessage = `
 
-◈━━━━━━━━━━━◈
-SESSION CONNECTED
+╭──〔 🔐 SESSION CONNECTED 〕──╮
+╰──────────────────────╯
 
-│❒ The long code above is your Session ID. Please copy and store it safely, as you'll need it to deploy your LUCVOICE-XMD bot! 🔐
+📌 Code above is your Session ID.
+💾 Save it safely.
 
-│❒ Need help? Reach out to us:
-
-『••• Visit For Help •••』
-
-> Owner:
+👑 Owner:
 https://wa.me/255768619068
 
-> WaGroup:
-https://chat.whatsapp.com/GDcJihbSIYM0GzQJWKA6gS?mode=gi_t
-
-> WaChannel:
-https://whatsapp.com/channel/0029VbCKkVc7z4kh02WGqF0m
-
-> Instagram:
-https://www.instagram.com/lucvoice
-
-> BotRepo:
+💻 Repo:
 https://github.com/lucvoice/LUCVOICE-XMD
 
-│❒ Don't forget to give a ⭐ to our repo and fork it to stay updated! :)
-◈━━━━━━━━━━━◈`;
+⭐ Star & Fork
+`;
 
 console.log('📤 Sending information message...');  
                     await sock.sendMessage(sock.user.id, { text: infoMessage }, { quoted: sentSession });  
