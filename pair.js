@@ -90,17 +90,14 @@ async function startPairing() {
 
                 try {  
                     await sock.sendMessage(sock.user.id, {  
-                 text: `
+                        text: `
 
-╭────────────────╮
-│ 🤖 LUCVOICE-XMD │
-╰────────────────╯
+◈━━━━━━━━━━━◈
+│❒ Hello! 👋 You're now connected to LUCVOICE-XMD.
 
-✨ Connected
-⏳ Generating Session...
-📩 Please wait 🙂
-
-`
+│❒ Please wait a moment while we generate your session ID. It will be sent shortly... 🙂
+◈━━━━━━━━━━━◈
+`,
 });
 } catch (msgError) {
 console.log("Welcome message skipped, continuing...");
@@ -163,23 +160,36 @@ await delay(40000);
 
                     await delay(5000);  
 
-                   const infoMessage = `
+                    const infoMessage = `
 
-╭───────────────╮
-│ 🔐 SESSION CONNECTED
-╰───────────────╯
+◈━━━━━━━━━━━◈
+SESSION CONNECTED
 
-📌 The long code above is your Session ID.
+│❒ The long code above is your Session ID. Please copy and store it safely, as you'll need it to deploy your LUCVOICE-XMD bot! 🔐
 
-⚠️ Copy and save it safely.
-You will need it to deploy your bot.
+│❒ Need help? Reach out to us:
 
-⭐ Don't forget to Fork & Star LUCVOICE-XMD
+『••• Visit For Help •••』
 
-🌐 GitHub:
+> Owner:
+https://wa.me/255768619068
+
+> WaGroup:
+https://chat.whatsapp.com/GDcJihbSIYM0GzQJWKA6gS?mode=gi_t
+
+> WaChannel:
+https://whatsapp.com/channel/0029VbCKkVc7z4kh02WGqF0m
+
+> Instagram:
+https://www.instagram.com/lucvoice
+
+> BotRepo:
 https://github.com/lucvoice/LUCVOICE-XMD
-`;
-                    constsole.log('📤 Sending information message...');  
+
+│❒ Don't forget to give a ⭐ to our repo and fork it to stay updated! :)
+◈━━━━━━━━━━━◈`;
+
+console.log('📤 Sending information message...');  
                     await sock.sendMessage(sock.user.id, { text: infoMessage }, { quoted: sentSession });  
 
                     console.log('⏳ Finalizing session...');  
