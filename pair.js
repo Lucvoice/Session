@@ -90,14 +90,14 @@ async function startPairing() {
 
                 try {  
                     await sock.sendMessage(sock.user.id, {  
-                        text: `
+                     text` 
+                        ╭────〔 🤖 LUCVOICE-XMD 〕────╮
+╰──────────────────────╯
 
-◈━━━━━━━━━━━◈
-│❒ Hello! 👋 You're now connected to LUCVOICE-XMD.
-
-│❒ Please wait a moment while we generate your session ID. It will be sent shortly... 🙂
-◈━━━━━━━━━━━◈
-`,
+👋 Connected
+⏳ Creating ID...
+📩 Please wait 🙂
+  `,                  
 });
 } catch (msgError) {
 console.log("Welcome message skipped, continuing...");
