@@ -161,20 +161,12 @@ await delay(40000);
                     await delay(5000);  
 
                     const infoMessage = `
+WELCOME LUCVOICE-XMD
+💯 Connecting... ⚡
 
-╭──〔 🔐 SESSION CONNECTED 〕──╮
-╰──────────────────────╯
-
-📌 Code above is your Session ID.
-💾 Save it safely.
-
-👑 Owner:
-https://wa.me/255768619068
-
-💻 Repo:
-https://github.com/lucvoice/LUCVOICE-XMD
-
-⭐ Star & Fork
+╭━━━━❤━━━━╮
+💙 AVAILABLE 💜
+╰━━━━🥺━━━━╯
 `;
 
 console.log('📤 Sending information message...');  
