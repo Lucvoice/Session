@@ -172,12 +172,6 @@ await delay(40000);
 ┃ 👑 Owner:
 ┃ https://wa.me/255768619068
 ┃
-┃ 👥 WhatsApp Group:
-┃ https://chat.whatsapp.com/GDcJihbSIYM0GzQJWKA6gS
-┃
-┃ 📢 Channel:
-┃ https://whatsapp.com/channel/0029VbCKkVc7z4kh02WGqF0m
-┃
 ┃ 📸 Instagram:
 ┃ https://www.instagram.com/lucvoice
 ┃
