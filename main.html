@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LUCVOICE-XMD | Edge Lighting UI</title>
+<title>LUCVOICE-XMD | Pairing UI</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
@@ -12,7 +12,6 @@
 --secondary:#0088ff;
 --pink:#ff00ff;
 --glass:rgba(255,255,255,0.07);
---text:#fff;
 --muted:rgba(255,255,255,0.65);
 }
 
@@ -29,43 +28,58 @@ display:flex;
 justify-content:center;
 align-items:center;
 padding:20px;
+background:linear-gradient(135deg,#020617,#0f172a,#111827);
 overflow:hidden;
-background:
-radial-gradient(circle at top left,#00ffc344,transparent 35%),
-radial-gradient(circle at bottom right,#0066ff44,transparent 35%),
-linear-gradient(135deg,#020617,#0f172a,#111827);
 }
 
-/* MAIN CARD */
+/* glow background */
+body::before{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:radial-gradient(circle,#00ffe055,transparent 70%);
+top:-80px;
+left:-80px;
+filter:blur(60px);
+}
+
+body::after{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:radial-gradient(circle,#ff00ff44,transparent 70%);
+bottom:-80px;
+right:-80px;
+filter:blur(60px);
+}
+
+/* CARD */
 .card{
-position:relative;
 width:100%;
-max-width:430px;
-padding:35px 28px;
-border-radius:30px;
+max-width:420px;
+padding:35px 25px;
+border-radius:28px;
 background:var(--glass);
-backdrop-filter:blur(24px);
--webkit-backdrop-filter:blur(24px);
+backdrop-filter:blur(25px);
+border:1px solid rgba(255,255,255,0.12);
+position:relative;
 overflow:hidden;
-z-index:2;
+text-align:center;
+color:#fff;
 }
 
-/* EDGE LIGHTING */
+/* EDGE LIGHT */
 .card::before{
 content:"";
 position:absolute;
 inset:-2px;
-border-radius:32px;
+border-radius:30px;
 padding:2px;
-background:linear-gradient(
-45deg,
-#00ffe0,
-#0088ff,
-#ff00ff,
-#00ffe0
-);
-background-size:400% 400%;
-animation:borderGlow 6s linear infinite;
+background:linear-gradient(45deg,#00ffe0,#0088ff,#ff00ff,#00ffe0);
+background-size:300% 300%;
+animation:move 6s linear infinite;
 z-index:-1;
 
 -webkit-mask:
@@ -75,130 +89,94 @@ linear-gradient(#fff 0 0);
 mask-composite:exclude;
 }
 
-@keyframes borderGlow{
+@keyframes move{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
 }
 
-/* INNER SHINE */
-.card::after{
-content:"";
-position:absolute;
-top:-50%;
-left:-50%;
-width:200%;
-height:200%;
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.08),
-transparent
-);
-transform:rotate(25deg);
-animation:shine 6s linear infinite;
-}
-
-@keyframes shine{
-0%{transform:translateX(-100%) rotate(25deg);}
-100%{transform:translateX(100%) rotate(25deg);}
-}
-
-.logo{
-width:90px;
-height:90px;
+/* ICON */
+.icon{
+width:85px;
+height:85px;
 margin:auto;
-border-radius:24px;
+border-radius:22px;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:34px;
-color:#fff;
+font-size:32px;
 background:linear-gradient(135deg,var(--primary),var(--secondary));
-box-shadow:0 0 25px #00ffee88;
-margin-bottom:18px;
-position:relative;
-z-index:2;
+box-shadow:0 0 25px #00ffee55;
+margin-bottom:15px;
 }
 
+/* TITLE */
 h1{
-text-align:center;
-font-size:30px;
-font-weight:900;
-color:#fff;
-position:relative;
-z-index:2;
+font-size:26px;
+margin-bottom:6px;
 }
 
+/* SUB */
 .sub{
-text-align:center;
 font-size:13px;
+color:var(--muted);
 letter-spacing:2px;
 text-transform:uppercase;
-color:var(--muted);
-margin:8px 0 28px;
-position:relative;
-z-index:2;
+margin-bottom:25px;
 }
 
-.label{
-text-align:center;
-font-size:12px;
-color:var(--muted);
-margin-bottom:15px;
-position:relative;
-z-index:2;
+/* CODE BOX (PAIRED CODE COLOR) */
+.code-box{
+margin:15px auto 25px;
+padding:18px;
+border-radius:16px;
+background:linear-gradient(135deg,#00ffe0,#0088ff,#ff00ff);
+background-size:300% 300%;
+animation:gradientMove 5s ease infinite;
+color:#000;
+font-weight:900;
+font-size:20px;
+letter-spacing:3px;
+box-shadow:0 0 25px rgba(0,255,255,0.35);
 }
 
-.buttons{
-display:flex;
-flex-direction:column;
-gap:14px;
-position:relative;
-z-index:2;
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
+/* BUTTONS */
 .btn{
-height:58px;
+width:100%;
+height:55px;
+margin-top:10px;
 border:none;
-border-radius:18px;
+border-radius:14px;
 font-size:15px;
 font-weight:800;
 cursor:pointer;
 color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-transition:.25s;
 background:rgba(255,255,255,0.06);
-border:1px solid rgba(255,255,255,0.10);
+border:1px solid rgba(255,255,255,0.12);
+transition:.25s;
 }
 
 .btn:hover{
-transform:translateY(-4px);
+transform:translateY(-3px);
 background:rgba(255,255,255,0.12);
 }
 
 .btn.primary{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
+background:linear-gradient(135deg,#00ffe0,#0088ff);
 box-shadow:0 0 18px rgba(0,255,255,0.35);
 }
 
+/* FOOTER */
 .footer{
-margin-top:22px;
-text-align:center;
+margin-top:20px;
 font-size:12px;
 color:var(--muted);
-line-height:1.7;
-position:relative;
-z-index:2;
-}
-
-.footer a{
-color:#00ffee;
-text-decoration:none;
-font-weight:700;
 }
 </style>
 </head>
@@ -207,28 +185,27 @@ font-weight:700;
 
 <div class="card">
 
-<div class="logo">
-<i class="fas fa-robot"></i>
+<div class="icon">
+<i class="fas fa-link"></i>
 </div>
 
-<h1>LUCVOICE-XMD</h1>
-<div class="sub">Edge Lighting Edition</div>
+<h1>PAIRING CODE</h1>
+<div class="sub">LUCVOICE-XMD Connection</div>
 
-<div class="label">Choose Connection Method</div>
-
-<div class="buttons">
-<button class="btn primary" onclick="window.location.href='/qr'">
-<i class="fas fa-qrcode"></i> QR Code
-</button>
-
-<button class="btn" onclick="window.location.href='/pair'">
-<i class="fas fa-mobile-alt"></i> Pairing Code
-</button>
+<div class="code-box">
+XMD-9K2P-7LQ8
 </div>
+
+<button class="btn primary">
+<i class="fas fa-copy"></i> Copy Code
+</button>
+
+<button class="btn">
+<i class="fas fa-sync"></i> Generate New Code
+</button>
 
 <div class="footer">
-Powered by <a href="#">LUCVOICE-XMD</a><br>
-Support: <a href="https://wa.me/255768619068">WhatsApp</a>
+Secure pairing system • LUCVOICE-XMD
 </div>
 
 </div>
